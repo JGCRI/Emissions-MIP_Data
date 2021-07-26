@@ -18,7 +18,7 @@ library(gridExtra)
 library(grid)
 
 # Specify location of Emissions-MIP directory
-emi_dir <- paste0('C:/Users/ahsa361/OneDrive - PNNL/Desktop/Emissions-MIP')
+emi_dir <- paste0('C:/Users/such559/OneDrive - PNNL/Documents/Emissions-MIP')
 
 # Specify region (i.e., global, land, sea, arctic, NH-land, NH-sea, SH-land, SH-sea)
 region <- "SH-sea"
@@ -36,6 +36,15 @@ model_colors <- c(CESM1 = cols[1], E3SM = cols[2], GISS = cols[3], MIROC = cols[
                   NorESM2 = cols[5], GFDL = cols[6], OsloCTM3 = cols[7])
 
 # ------------------------------------------------------------------------------
+#set directory to the input file of models to exclude
+setwd(paste0(emi_dir, '/input'))
+
+#Load the csv file
+excluded_models <- read.csv(file = paste0(getwd(), '/excluded_data.csv'))
+excluded_models %>% drop_na() #gets rid of any empty spaces
+
+#-------------------------------------------------------------------------------
+
 
 # Setup directory for bc-no-seas difference data
 setwd(paste0(emi_dir, '/input/', region, '/bc-no-season/diff'))
@@ -167,6 +176,13 @@ summary_data$model[which(summary_data$model == "CESM")] <- "CESM1"
 # Change to long format
 summary_long <- summary_data %>% gather(experiment, value, -c(model, variable)) %>%
   drop_na()
+
+#runs through each excluded model pair and filters them out of summary_long
+if(nrow(excluded_models) != 0) { #only runs if the data frame is not empty
+  for (val in 1:nrow(excluded_models)) {
+    summary_long <- filter(summary_long, experiment != excluded_models$Scenario[val] & model != excluded_models$ï..Model[val])
+  }
+}
 
 # Generate plots
 title_font <- 9.5
