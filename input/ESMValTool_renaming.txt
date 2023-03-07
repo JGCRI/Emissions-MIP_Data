@@ -1,0 +1,25 @@
+
+
+Rscript ./summary_plots_diff.R region arctic
+rscript ./summary_plots_diff.R region global
+rscript ./summary_plots_diff.R region land
+rscript ./summary_plots_diff.R region NH-atlantic
+rscript ./summary_plots_diff.R region NH-indian
+rscript ./summary_plots_diff.R region NH-land
+rscript ./summary_plots_diff.R region NH-pacific
+rscript ./summary_plots_diff.R region NH-sea
+rscript ./summary_plots_diff.R region sea
+rscript ./summary_plots_diff.R region SH-land
+rscript ./summary_plots_diff.R region SH-sea
+
+for dir in /input; do echo $dir ; done
+
+for dir in *; do cd $dir; cd CMIP5-SO2; cd diff; rm *BW1950.csv; rm *nudge-ref-1950.csv; cd ..; cd CMIP5-SO2-1950; cd diff; rm *BW1950.csv; rm *ref-1950.csv; done
+
+for dir in *; do cd $dir: cd CMIP5-SO2; cd diff; rename 'timeseries' timeseries-diff' *; ../..; cd CMIP5-SO2-1950; cd diff; rename 'timeseries' 'timeseries-diff'; cd /pic/projects/GCAM/Emissions-MIP/1b_esmvaltool_output; done
+
+for dir in *; do cd $dir; cd CMIP5-SO2; cd diff; rename 'AerChemMIP_BW2000_CMIP5' 'GISS-E2-1-G' *AerChemMIP_BW2000_CMIP5.csv; rename 'CMIP_nudge-CMIP5-SO2' 'E3SM-1-0' *CMIP_nudge-CMIP5-SO2.csv; cd ../.. ; cd CMIP5-SO2-1950; cd diff; rename 'AerChemMIP_BW1950_CMIP5' 'GISS-E2-1-G' *AerChemMIP_BW1950_CMIP5.csv; rename 'CMIP_nudge-CMIP5-SO2-1950' 'E3SM-1-0' *CMIP_nudge-CMIP5-SO2-1950.csv; cd /pic/projects/GCAM/Emissions-MIP/1b_esmvaltool_output; done
+
+rename 's/timeseries/timeseries-diff/g' *.csv; rename 's/AerChemMIP_BW1950_CMIP5/GISS-E2-1-G/g' *AerChemMIP_BW1950_CMIP5.csv; rename 's/CMIP_nudge-CMIP5-SO2-1950/E3SM-1-0/g' *CMIP_nudge-CMIP5-SO2-1950.csv; done
+
+find . -name timeseries* -exec rename 'timeseries' 'timeseries-diff' {} \;

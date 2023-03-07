@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Program Name: summary_plots_per-diff.R
 # Authors: Hamza Ahsan, Harrison Suchyta
-# Date Last Modified: January 14, 2022
+# Date Last Modified: October 9, 2022
 # Program Purpose: Produces summary plots of the difference between the
 # perturbations and the reference case averaged over all years
 # Input Files: ~Emissions-MIP/input/
@@ -26,7 +26,7 @@ setwd(paste0(emi_dir))
 sort_by <- 'region'
 
 #determines which region or experiment is sorted by
-region <- 'arctic'
+region <- 'global'
 exper <- 'bc-no-season'
 
 # Specify what you are sorting by and either the region (i.e., global, land, sea, arctic, NH-land, NH-sea, SH-land, SH-sea) or experiment (i.e., bc-no-season, high-so4, no-so4, reference, so2-at-height, so2-no-season)
@@ -238,7 +238,6 @@ if(sort_by == "region"){
     }
 
     # Bind data together
-    #summary_data <- list(bc_no_season_summary, high_so4_summary, no_so4_summary, so2_at_height_summary, so2_no_season_summary) %>% reduce(left_join, by = c("variable", "model"))
     summary_data <- summary_data_list %>% reduce(left_join, by = c("variable", "model"))
 
     # Correct model names for CESM and CESM2
@@ -325,7 +324,6 @@ find_max_min <- function(variable_data, variable, varname){
   return(variable_data)
 }
 #-------------------------------------------------------------------------------
-#Creates a function that filters species
 #creates a function that filters species out of a database
 filter_species <- function(database, species){
   species <- dplyr::filter(database, variable == species)

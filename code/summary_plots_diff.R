@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Program Name: summary_plots_diff.R
 # Authors: Hamza Ahsan, Harrison Suchyta
-# Date Last Modified: January 14, 2022
+# Date Last Modified: April 4, 2022
 # Program Purpose: Produces summary plots of the difference between the
 # perturbations and the reference case averaged over all years
 # Input Files: ~Emissions-MIP/input/
@@ -26,8 +26,8 @@ setwd(paste0(emi_dir))
 sort_by <- 'region'
 
 #determines which region or experiment is sorted by
-region <- 'arctic'
-exper <- 'bc-no-season'
+region <- 'global'
+exper <- 'high-SO4-at-height'
 
 # Specify what you are sorting by and either the region (i.e., global, land, sea, arctic, NH-land, NH-sea, SH-land, SH-sea) or experiment (i.e., bc-no-season, high-so4, no-so4, reference, so2-at-height, so2-no-season)
 #The command line would look like: rscript <rscript>.r <"experiment" or "region"> <specific experiment or region you are sorting by>
@@ -95,14 +95,15 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#920000",
                "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#490092",
                "#117733")
 
-model_colors <- c(CESM1 = cbPalette[1], E3SM = cbPalette[2], GISS = cbPalette[3],
-                  CESM2 = cbPalette[4], MIROC = cbPalette[5], NorESM2 = cbPalette[6],
-                  GFDL = cbPalette[7], OsloCTM3 = cbPalette[8], UKESM = cbPalette[9],
-                  GEOS = cbPalette[10], CAM5 = cbPalette[11])
+model_colors <- c(CESM1 = cbPalette[1], E3SM = cbPalette[2], GISS = cbPalette[3])
+                  #,
+                  # CESM2 = cbPalette[4], MIROC = cbPalette[5], NorESM2 = cbPalette[6],
+                  # GFDL = cbPalette[7], OsloCTM3 = cbPalette[8], UKESM = cbPalette[9],
+                  # GEOS = cbPalette[10], CAM5 = cbPalette[11])
 
-model_symbols <- c(CESM1 = 15, E3SM = 15, GISS = 17, CESM2 = 19, MIROC = 15,
-                   NorESM2 = 17, GFDL = 19, OsloCTM3 = 19, UKESM = 15, GEOS = 17,
-                   CAM5 = 17)
+model_symbols <- c(CESM1 = 15, E3SM = 15, GISS = 17) #, CESM2 = 19, MIROC = 15,
+                   #NorESM2 = 17, GFDL = 19, OsloCTM3 = 19, UKESM = 15, GEOS = 17,
+                   #CAM5 = 17)
 
 #-------------------------------------------------------------------------------
 #extracts data for each perturbation experiment from csv files
@@ -126,11 +127,11 @@ data_accumulation <- function(emi_dir, reg_name, exper){
   # to be consistent with convention (i.e. positive value denotes a heating effect),
   # then take the average over all years for each variable and calculate std dev
   regional_data_summary <- regional_data %>%
-    dplyr::group_by(variable, model) %>%
     within(value <- ifelse(variable == "so2", 64.066 / 28.96, 1) * value) %>%
     within(value <- ifelse(variable %in% c("rlut", "rsut", "rlutcs", "rsutcs"), -1, 1) * value) %>%
     within(value <- ifelse(variable %in% c("wetbc", "wetso2", "wetso4") & model == "CESM2", -1, 1) * value) %>%
     within(value <- ifelse(variable == "dms", 62.13 / 28.96, 1) * value) %>%
+    dplyr::group_by(variable, model) %>%
     dplyr::summarise(regional_data = mean(value), regional_data_sd = sd(value))
 
   return(regional_data_summary)
@@ -394,6 +395,16 @@ if (sort_by == "region"){
   #creates a summary_long with the data being focused on
   summary_long <- create_summary_long(region, emi_dir)
 
+  # source("C:/Users/such559/Documents/Emissions-MIP_Data/code/cobine_so2_so4.R")
+  #
+  # summed_so2_so4_adjusted <- summed_so2_so4[[paste0('so4_so2_sum_',region)]] %>%
+  #   dplyr::rename(value = regional_data) %>%
+  #   dplyr::rename(sd = regional_data_sd)
+  # summed_so2_so4_adjusted <- summed_so2_so4_adjusted[,c('variable','model','experiment','value','sd')]
+  #
+  # summary_long <- summary_long %>%
+  #   rbind(summed_so2_so4_adjusted)
+
   if(fixed_data[1, 'fixed_by'] == 'group'){
     #filter out each variable and determine max and min
 
@@ -493,6 +504,16 @@ if (sort_by == "experiment"){
   #read in data for each region
   summary_long <- create_summary_long(exper, emi_dir)
 
+  #source("C:/Users/such559/Documents/Emissions-MIP_Data/code/cobine_so2_so4.R")
+#
+#   summed_so2_so4_adjusted <- summed_so2_so4[[paste0('so4_so2_sum_',region)]] %>%
+#     dplyr::rename(value = regional_data) %>%
+#     dplyr::rename(sd = regional_data_sd)
+#   summed_so2_so4_adjusted <- summed_so2_so4_adjusted[,c('variable','model','experiment','value','sd')]
+#
+#   summary_long <- summary_long %>%
+#     rbind(summed_so2_so4_adjusted)
+
   if(fixed_data[1, 'fixed_by'] == 'group'){
 
     #Create an empty variable dataframe list
@@ -587,6 +608,13 @@ so2_timescale_to_fix <- total_vars[[so2_timescale_index]]
 so4_lifetime_to_fix <- total_vars[[so4_lifetime_index]]
 total_vars[[so2_timescale_index]] <- mutate(so2_timescale_to_fix, value = value / 86400, sd = sd / 86400)
 total_vars[[so4_lifetime_index]] <- mutate(so4_lifetime_to_fix, value = value / 86400, sd = sd / 86400)
+#Convert the max min data from seconds to days as well
+variables['so2_timescale','Max'] <- variables['so2_timescale','Max'] / 86400
+variables['so2_timescale','Min'] <- variables['so2_timescale','Min'] / 86400
+variables['so4_lifetime','Max'] <- variables['so4_lifetime','Max'] / 86400
+variables['so4_lifetime','Min'] <- variables['so4_lifetime','Min'] / 86400
+
+test <- as.character(variables[2,3])
 
 #Creates a function that creates plots for the data based on each species
 if (sort_by == "region"){
