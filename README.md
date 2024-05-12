@@ -1,7 +1,7 @@
 # Emissions-MIP_Data
 Emissions Model Intercomparison Project
 
-Data: [![DOI](https://zenodo.org/badge/362623387.svg)](https://zenodo.org/badge/latestdoi/362623387)
+[![DOI](https://zenodo.org/badge/362623387.svg)](https://zenodo.org/badge/latestdoi/362623387)
 
 Publication: Ahsan, H., Wang, H., Wu, J., Wu, M., Smith, S. J., Bauer, S., Suchyta, H., Olivié, D., Myhre, G., Matsui, H., Bian, H., Lamarque, J.-F., Carslaw, K., Horowitz, L., Regayre, L., Chin, M., Schulz, M., Skeie, R. B., Takemura, T., and Naik, V.: The Emissions Model Intercomparison Project (Emissions-MIP): quantifying model sensitivity to emission characteristics, Atmos. Chem. Phys., 23, 14779–14799, https://doi.org/10.5194/acp-23-14779-2023, 2023.
 
