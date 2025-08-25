@@ -1,0 +1,6 @@
+variable,year,value,unit
+rlut,2000,0.02973938,W m-2
+rlut,2001,0.0234375,W m-2
+rlut,2002,0.039260864,W m-2
+rlut,2003,0.010360718,W m-2
+rlut,2004,0.01663208,W m-2

@@ -1,6 +1,6 @@
 variable,year,value,unit
-emiso2,2000,-2.8012383166327023e-16,kg m-2 s-1
-emiso2,2001,-1.0370721091395607e-16,kg m-2 s-1
-emiso2,2002,1.3144543309458954e-16,kg m-2 s-1
-emiso2,2003,4.043867177791444e-16,kg m-2 s-1
-emiso2,2004,-2.3346670822832414e-16,kg m-2 s-1
+emiso2,2000,0.0,kg m-2 s-1
+emiso2,2001,0.0,kg m-2 s-1
+emiso2,2002,0.0,kg m-2 s-1
+emiso2,2003,0.0,kg m-2 s-1
+emiso2,2004,0.0,kg m-2 s-1

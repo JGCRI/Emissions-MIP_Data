@@ -1,6 +1,6 @@
 variable,year,value,unit
-dms,2000,0.0,mol mol-1
-dms,2001,0.0,mol mol-1
-dms,2002,0.0,mol mol-1
-dms,2003,0.0,mol mol-1
-dms,2004,0.0,mol mol-1
+dms,2000,-0.044795634315060215,mol mol-1
+dms,2001,0.03207638079311992,mol mol-1
+dms,2002,-0.2569764727588145,mol mol-1
+dms,2003,-0.719059469013227,mol mol-1
+dms,2004,0.03886644895936585,mol mol-1

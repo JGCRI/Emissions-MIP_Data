@@ -1,0 +1,6 @@
+variable,year,value,unit
+loadbc,2000,-0.013528999,kg m-2
+loadbc,2001,-0.021041933,kg m-2
+loadbc,2002,0.10035324,kg m-2
+loadbc,2003,0.14114936,kg m-2
+loadbc,2004,0.0061324243,kg m-2

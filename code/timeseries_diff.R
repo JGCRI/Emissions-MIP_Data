@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Program Name: timeseries_diff.R
 # Authors: Hamza Ahsan
-# Date Last Modified: November 5, 2021
+# Date Last Modified: November 15th, 2023
 # Program Purpose: Produces time series line plots of the difference between
 # the perturbations and the reference case
 # Input Files: ~Emissions-MIP/input/
@@ -17,11 +17,9 @@ library(ggplot2)
 library(gridExtra)
 library(grid)
 
-#set the working directory to the code directory
-setwd('C:/Users/such559/Documents/Emissions-MIP_Phase1b')
-
-# Specify location of Emissions-MIP directory
-emi_dir <- paste0('C:/Users/such559/Documents/Emissions-MIP_Phase1b')
+# Specify and navigate to the location of Emissions-MIP directory
+emi_dir <- paste0("C:/Users/done231/OneDrive - PNNL/Documents/GitHub/Emissions-MIP_Data/Emissions-MIP_Data/")
+setwd(paste0(emi_dir))
 
 # Specify what you are sorting by and either the region (i.e., global, land, sea, arctic, NH-land, NH-sea, SH-land, SH-sea) or experiment (i.e., bc-no-season, high-so4, no-so4, reference, so2-at-height, so2-no-season)
 #The command line would look like: rscript <rscript>.r <"experiment" or "region"> <specific experiment or region you are sorting by>
@@ -30,17 +28,20 @@ sort_by <- sorting[1]
 if (sort_by == "region"){region <- sorting[2]}
 if (sort_by == "experiment"){pert <- sorting[2]}
 
+sort_by <- 'experiment'
+pert <- 'shp-60p-red'
+
 # Define colorblind-friendly palette colors and associate with models (in case a
 # plot is missing a model, the color scheme will remain consistent)
-cbPalette <- c("#0072B2", "#D55E00")
+cbPalette <- c("#c4c4c3", "#4477aa", "#228833", "#66ccee", "#ccbb44","#ee6677", "#aa3377")
 
-model_colors <- c('CESM1' = cbPalette[1], 'GISS' = cbPalette[2])
-model_symbols <- c("CESM1" = 15, "GISS" = 17)
+model_colors <- c('CESM1' = cbPalette[1], 'GISS-E2.1' = cbPalette[2], 'CAM-ATRAS' = cbPalette[3], 'GEOS' = cbPalette[4], 'NorESM2' = cbPalette[5], 'GFDL-ESM4' = cbPalette[6], 'E3SM' = cbPalette[7])
+model_symbols <- c("CESM1" = 15, "GISS-E2.1" = 17, "CAM-ATRAS" = 17, "NorESM2" = 17, "GEOS" = 17, "GFDL-ESM4" = 19, "E3SM" = 15)
 
 # ------------------------------------------------------------------------------
 # Iterate over the different perturbation/regional experiments
-if (sort_by == "region"){scenarios <- c('shp-10p-red', 'shp-10p-red-1950', 'shp-20p-red', 'shp-20p-red-1950',
-                                        'shp-80p-red', 'shp-atl-shift', 'shp-atl-shift-1950', 'shp-ind-shift',
+if (sort_by == "region"){scenarios <- c('shp-30p-red', 'shp-60p-red', 'shp-60p-red-1950',
+                                        'shp-atl-shift', 'shp-atl-shift-1950', 'shp-ind-shift',
                                         'shp-ind-shift-1950')}
 if (sort_by == "experiment"){scenarios <- c("arctic", "global", "land", "NH-atlantic", "NH-indian", "NH-land", "NH-pacific", "NH-sea", "sea", "SH-land", "SH-sea")}
 #-------------------------------------------------------------------------------
@@ -68,6 +69,9 @@ for(scenario in scenarios){
 
   # Correct model names
   experiment$model[which(experiment$model == "CESM")] <- "CESM1"
+  experiment$model[which(experiment$model == "GISS")] <- "GISS-E2.1"
+  experiment$model[which(experiment$model == "CAM5")] <- "CAM-ATRAS"
+  experiment$model[which(experiment$model == "GFDL")] <- "GFDL-ESM4"
 
 
   # Rearrange data frame by years descending
@@ -115,6 +119,7 @@ for(scenario in scenarios){
   loadso4_experiment <- dplyr::filter(experiment, variable == 'loadso4')
   loadbc_experiment <- dplyr::filter(experiment, variable == 'loadbc')
   od550aer_experiment <- dplyr::filter(experiment, variable == 'od550aer')
+  loadso2_experiment <- dplyr::filter(experiment, variable == 'loadso2')
 
   # Define normal and clear-sky net radiative flux and  (sum of longwave and shortwave radiation)
   net_rad <- dplyr::left_join(rlut_experiment, rsut_experiment, by = c("year", "unit", "model"))
@@ -146,6 +151,28 @@ for(scenario in scenarios){
 
   tot_s <- dplyr::left_join(dry_s, wet_s, by = c("year", "unit", "model"))
   tot_s <- dplyr::mutate(tot_s, value = value.x + value.y) %>%
+    dplyr::select(c(year, unit, model, value))
+  
+  # Define total so4 (sum of dry and wet so4)
+  tot_so4 <- dplyr::left_join(dryso4_experiment, wetso4_experiment, by = c("year","unit","model"))
+  tot_so4 <- dplyr::mutate(tot_so4, value = value.x + value.y) %>%
+    #dplyr::mutate(sd = sqrt(sd.x^2 + sd.y^2)) %>%
+    dplyr::select(c(year, unit, model, value))
+  
+  # Define so4 lifetime (loadso4/tot_so4), convert from seconds to days
+  so4_lifetime <- dplyr::left_join(loadso4_experiment, tot_so4, by = c("year","unit","model"))
+  so4_lifetime <- dplyr::mutate(so4_lifetime, value = (value.x/value.y)/86400) %>%
+    #dplyr::mutate(sd = value*sqrt((sd.x/value.x)^2 + (sd.y/value.y)^2)) %>%
+    #dplyr::filter_if(~is.numeric(.), all_vars(!is.infinite(.))) %>%
+    #dplyr::filter(value >= 0) %>%
+    dplyr::select(c(year, unit, model, value))
+  
+  # define so2 lifetime (loadso2/emiso2), convert seconds to days
+  so2_lifetime <- dplyr::left_join(loadso2_experiment, emiso2_experiment, by = c("year","unit","model"))
+  so2_lifetime <- dplyr::mutate(so2_lifetime, value = (value.x/value.y)/86400) %>%
+    #dplyr::mutate(sd = value*sqrt((sd.x/value.x)^2 + (sd.y/value.y)^2)) %>%
+    #dplyr::filter_if(~is.numeric(.), all_vars(!is.infinite(.))) %>%
+    #dplyr::filter(value >= 0) %>%
     dplyr::select(c(year, unit, model, value))
 
 
@@ -194,9 +221,13 @@ for(scenario in scenarios){
     cl_plot <- plot_species(cl_experiment, region, "cloud cover \n percentage", "expression cltc (%)")
     clivi_plot <- plot_species(clivi_experiment, region, "Ice water path", expression(clivi~(kg~m^-2)))
     dms_plot <- plot_species(dms_experiment, region, 'Dimethyl sulphide (DMS) mole fraction', expression(dms~(mol~mol^-1)))
-    loadso4_plot <- plot_species(loadso4_experiment, region, "load \n of so2", expression(loadso4~(kg~m^-2)))
+    loadso4_plot <- plot_species(loadso4_experiment, region, "load \n of so4", expression(loadso4~(kg~m^-2)))
     loadbc_plot <- plot_species(loadbc_experiment, region, "load \n of bc", expression(loadbc~(kg~m^-2)))
     imp_cld_plot <- plot_species(imp_cld, region, "implied cloud response \n at TOA", expression(rlut~+~rsut~-~rlutcs~-~rsutcs~(W~m^-2)))
+    loadso2_plot <- plot_species(loadso2_experiment, region, "load of so2 \n", expression(loadso2~(kg~m^-2)))
+    tot_so4_plot <- plot_species(tot_so4, region, 'total SO4 - \n', expression(dryso4~+~wetso4))
+    so4_lifetime <- plot_species(so4_lifetime, region, 'SO4 lifetime - \n ', expression(loadso4/(dryso4~+~wetso4)~(days)))
+    so2_lifetime <- plot_species(so2_lifetime, region, 'SO2 lifetime - \n', expression(loadso2/emiso2~(days)))
   }
 
   if (sort_by == "experiment"){
@@ -230,6 +261,10 @@ for(scenario in scenarios){
     loadso4_plot <- plot_species(loadso4_experiment, pert, "load \n of so4", expression(loadso4~(kg~m^-2)))
     loadbc_plot <- plot_species(loadbc_experiment, pert, "load \n of bc", expression(loadbc~(kg~m^-2)))
     imp_cld_plot <- plot_species(imp_cld, pert, "implied cloud response \n at TOA", expression(rlut~+~rsut~-~rlutcs~-~rsutcs~(W~m^-2)))
+    loadso2_plot <- plot_species(loadso2_experiment, pert, "load of so2 \n", expression(loadso2~(kg~m^-2)))
+    #tot_so4_plot <- plot_species(tot_so4, pert, value, 'total SO4 - \n', expression(dryso4~+~wetso4~(kg~m^-2~s^-1)))
+    #so4_lifetime_plot <- plot_species(so4_lifetime, pert, value, 'SO4 lifetime - \n ', expression(loadso4/(dryso4~+~wetso4)~(days)))
+    #so2_lifetime_plot <- plot_species(so2_lifetime, pert, value, 'SO2 lifetime - \n', expression(loadso2/emiso2~(days)))
   }
 
   # Function from stack exchange to generate a shared legend
@@ -276,7 +311,10 @@ for(scenario in scenarios){
                                            dms_plot,
                                            od550aer_plot,
                                            loadso4_plot,
-                                           loadbc_plot)
+                                           loadbc_plot,
+                                           loadso2_plot)#,
+                                           #so4_lifetime_plot,
+                                           #so2_lifetime_plot)
 
   # Print plots
 
@@ -291,4 +329,3 @@ for(scenario in scenarios){
     ggsave(paste0(scenario, '_', pert ,'_diff.pdf'), final_plot, width = 21, height = 29.7, units = "cm")
   }
 }
-

@@ -1,0 +1,435 @@
+---
+title: "Difference Map Layout"
+output: html_document
+date: "Last compiled on `r format(Sys.time(), '%m-%d-%y, %X %Z')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,fig.align="center")
+```
+
+## Cloud Area Fraction difference maps
+
+# CAM5ATRAS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%}
+
+# CAM5ATRAS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/CAM5ATRAS/clt_CAM5ATRAS_plot_diff.png){width=40%}
+
+# CESM1 Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/CESM1/clt_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/CESM1/clt_CESM1_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/CESM1/clt_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/CESM1/clt_CESM1_plot_diff.png){width=40%}
+
+# CESM1 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/CESM1/clt_CESM1_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/CESM1/clt_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/CESM1/clt_CESM1_plot_diff.png){width=40%}
+
+# E3SM Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/E3SM/clt_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/E3SM/clt_E3SM_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/E3SM/clt_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/E3SM/clt_E3SM_plot_diff.png){width=40%}
+
+# E3SM 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/E3SM/clt_E3SM_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/E3SM/clt_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/E3SM/clt_E3SM_plot_diff.png){width=40%}
+
+# GEOS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GEOS/clt_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GEOS/clt_GEOS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GEOS/clt_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GEOS/clt_GEOS_plot_diff.png){width=40%}
+
+# GEOS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GEOS/clt_GEOS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GEOS/clt_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GEOS/clt_GEOS_plot_diff.png){width=40%}
+
+# GFDL Plots
+
+<!-- ## 30% reduction / 60% reduction -->
+
+<!-- ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GFDL/clt_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GFDL/clt_GFDL_plot_per-diff.png){width=40%} -->
+
+<!-- ## Atlantic shift / Indian shift -->
+
+<!-- ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GFDL/clt_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GFDL/clt_GFDL_plot_per-diff.png){width=40%} -->
+
+# GFDL 1950s Plots
+<!-- ## 60% reduction -->
+
+<!-- ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GFDL/clt_GFDL_plot_per-diff.png){width=40%} -->
+
+<!-- ## Atlantic shift / Indian shift -->
+
+<!-- ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GFDL/clt_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GFDL/clt_GFDL_plot_per-diff.png){width=40%} -->
+
+# GISS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GISS/clt_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GISS/clt_GISS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GISS/clt_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GISS/clt_GISS_plot_diff.png){width=40%}
+
+# GISS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GISS/clt_GISS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GISS/clt_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GISS/clt_GISS_plot_diff.png){width=40%}
+
+
+# NorESM2 Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/NorESM2/clt_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/NorESM2/clt_NorESM2_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/NorESM2/clt_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/NorESM2/clt_NorESM2_plot_diff.png){width=40%}
+
+# NorESM2 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/NorESM2/clt_NorESM2_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/NorESM2/clt_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/NorESM2/clt_NorESM2_plot_diff.png){width=40%}
+
+## Upwelling shortwave flux difference maps
+
+# CAM5ATRAS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%}
+
+# CAM5ATRAS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/CAM5ATRAS/rsut_CAM5ATRAS_plot_diff.png){width=40%}
+
+# CESM1 Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/CESM1/rsut_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/CESM1/rsut_CESM1_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/CESM1/rsut_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/CESM1/rsut_CESM1_plot_diff.png){width=40%}
+
+# CESM1 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/CESM1/rsut_CESM1_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/CESM1/rsut_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/CESM1/rsut_CESM1_plot_diff.png){width=40%}
+
+# E3SM Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/E3SM/rsut_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/E3SM/rsut_E3SM_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/E3SM/rsut_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/E3SM/rsut_E3SM_plot_diff.png){width=40%}
+
+# E3SM 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/E3SM/rsut_E3SM_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/E3SM/rsut_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/E3SM/rsut_E3SM_plot_diff.png){width=40%}
+
+# GEOS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GEOS/rsut_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GEOS/rsut_GEOS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GEOS/rsut_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GEOS/rsut_GEOS_plot_diff.png){width=40%}
+
+# GEOS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GEOS/rsut_GEOS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GEOS/rsut_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GEOS/rsut_GEOS_plot_diff.png){width=40%}
+
+# GFDL Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GFDL/rsut_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GFDL/rsut_GFDL_plot_per-diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GFDL/rsut_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GFDL/rsut_GFDL_plot_per-diff.png){width=40%}
+
+# GFDL 1950s Plots
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GFDL/rsut_GFDL_plot_per-diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GFDL/rsut_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GFDL/rsut_GFDL_plot_per-diff.png){width=40%}
+
+# GISS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GISS/rsut_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GISS/rsut_GISS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GISS/rsut_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GISS/rsut_GISS_plot_diff.png){width=40%}
+
+# GISS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GISS/rsut_GISS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GISS/rsut_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GISS/rsut_GISS_plot_diff.png){width=40%}
+
+
+# NorESM2 Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/NorESM2/rsut_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/NorESM2/rsut_NorESM2_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/NorESM2/rsut_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/NorESM2/rsut_NorESM2_plot_diff.png){width=40%}
+
+# NorESM2 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/NorESM2/rsut_NorESM2_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/NorESM2/rsut_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/NorESM2/rsut_NorESM2_plot_diff.png){width=40%}
+
+## Upwelling longwave flux difference maps
+
+# CAM5ATRAS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%}
+
+# CAM5ATRAS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/CAM5ATRAS/rlut_CAM5ATRAS_plot_diff.png){width=40%}
+
+# CESM1 Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/CESM1/rlut_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/CESM1/rlut_CESM1_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/CESM1/rlut_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/CESM1/rlut_CESM1_plot_diff.png){width=40%}
+
+# CESM1 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/CESM1/rlut_CESM1_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/CESM1/rlut_CESM1_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/CESM1/rlut_CESM1_plot_diff.png){width=40%}
+
+# E3SM Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/E3SM/rlut_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/E3SM/rlut_E3SM_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/E3SM/rlut_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/E3SM/rlut_E3SM_plot_diff.png){width=40%}
+
+# E3SM 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/E3SM/rlut_E3SM_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/E3SM/rlut_E3SM_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/E3SM/rlut_E3SM_plot_diff.png){width=40%}
+
+# GEOS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GEOS/rlut_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GEOS/rlut_GEOS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GEOS/rlut_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GEOS/rlut_GEOS_plot_diff.png){width=40%}
+
+# GEOS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GEOS/rlut_GEOS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GEOS/rlut_GEOS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GEOS/rlut_GEOS_plot_diff.png){width=40%}
+
+# GFDL Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GFDL/rlut_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GFDL/rlut_GFDL_plot_per-diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GFDL/rlut_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GFDL/rlut_GFDL_plot_per-diff.png){width=40%}
+
+# GFDL 1950s Plots
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GFDL/rlut_GFDL_plot_per-diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GFDL/rlut_GFDL_plot_per-diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GFDL/rlut_GFDL_plot_per-diff.png){width=40%}
+
+# GISS Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/GISS/rlut_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/GISS/rlut_GISS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/GISS/rlut_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/GISS/rlut_GISS_plot_diff.png){width=40%}
+
+# GISS 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/GISS/rlut_GISS_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/GISS/rlut_GISS_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/GISS/rlut_GISS_plot_diff.png){width=40%}
+
+
+# NorESM2 Plots
+
+## 30% reduction / 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-30p-red/NorESM2/rlut_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red/NorESM2/rlut_NorESM2_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift/NorESM2/rlut_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift/NorESM2/rlut_NorESM2_plot_diff.png){width=40%}
+
+# NorESM2 1950s Plots
+
+## 60% reduction
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-60p-red-1950/NorESM2/rlut_NorESM2_plot_diff.png){width=40%}
+
+## Atlantic shift / Indian shift
+
+![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-atl-shift-1950/NorESM2/rlut_NorESM2_plot_diff.png){width=40%} ![](C:/Users/done231/OneDrive - PNNL/Desktop/difference_plot_files/output/scenario/shp-ind-shift-1950/NorESM2/rlut_NorESM2_plot_diff.png){width=40%}
