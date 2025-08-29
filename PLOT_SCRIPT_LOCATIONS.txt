@@ -1,0 +1,6 @@
+Plots in paper script locations:
+
+Figure 2: difference_maps.R (outputs in code/difference_plot_files/output)
+All other figures in paper: additional_paper_plots.R
+
+Supplement figures: summary_plots_diff.R
